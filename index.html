@@ -9,14 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --canopy-dark:#0D211C;
-    --canopy-green:#1B3A2F;
-    --amber:#D9A441;
-    --amber-soft:#E8C377;
-    --bark:#6B4A34;
-    --parchment:#F3E9D2;
-    --sage:#7FA383;
-    --shadow-soft: 0 12px 40px rgba(0,0,0,0.35);
+    --canopy-dark:#FBF6EE;
+    --canopy-green:#F0E4D0;
+    --amber:#C2703A;
+    --amber-soft:#8C6748;
+    --bark:#6B3A28;
+    --parchment:#3A2A1E;
+    --sage:#7FA35C;
+    --shadow-soft: 0 12px 40px rgba(0,0,0,0.12);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html,body{height:100%;}
@@ -45,8 +45,8 @@
     position:absolute; inset:0;
     pointer-events:none;
     background:
-      radial-gradient(ellipse 380px 260px at 15% 20%, rgba(217,164,65,0.10), transparent 60%),
-      radial-gradient(ellipse 320px 220px at 85% 75%, rgba(217,164,65,0.08), transparent 60%);
+      radial-gradient(ellipse 380px 260px at 15% 20%, rgba(194,112,58,0.10), transparent 60%),
+      radial-gradient(ellipse 320px 220px at 85% 75%, rgba(194,112,58,0.08), transparent 60%);
     animation: driftMove 18s ease-in-out infinite alternate;
     z-index:1;
   }
@@ -88,14 +88,14 @@
     text-align:center;
     padding:16px;
     border:2px dashed var(--amber);
-    background:repeating-linear-gradient(135deg, rgba(217,164,65,0.06) 0 10px, transparent 10px 20px);
+    background:repeating-linear-gradient(135deg, rgba(194,112,58,0.06) 0 10px, transparent 10px 20px);
   }
   .placeholder-photo svg{width:44px;height:44px;opacity:0.8;}
 
   #screen-home::before{
     content:"";
     position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(13,33,28,0.15) 0%, rgba(13,33,28,0.55) 55%, var(--canopy-dark) 92%);
+    background: linear-gradient(180deg, rgba(251,246,238,0.15) 0%, rgba(251,246,238,0.55) 55%, var(--canopy-dark) 92%);
     z-index:1;
   }
   .home-content{
@@ -133,7 +133,7 @@
     background:var(--amber);
     color:var(--canopy-dark);
     cursor:pointer;
-    box-shadow: 0 8px 24px rgba(217,164,65,0.35);
+    box-shadow: 0 8px 24px rgba(194,112,58,0.35);
     transition: transform 0.08s ease, box-shadow 0.15s ease;
   }
   .btn:active{ transform:scale(0.96); }
@@ -161,7 +161,7 @@
   }
   .credit-name{
     font-size:11px;
-    font-weight:700;
+    font-weight:400;
     letter-spacing:0.03em;
     color:var(--parchment);
   }
@@ -181,7 +181,7 @@
     border-radius:20px;
     overflow:hidden;
     background:var(--canopy-green);
-    border:1px solid rgba(217,164,65,0.25);
+    border:1px solid rgba(194,112,58,0.25);
   }
   .slide{
     position:absolute; inset:0;
@@ -219,13 +219,13 @@
     width:100%;
     height:4px;
     border-radius:4px;
-    background:rgba(243,233,210,0.15);
+    background:rgba(58,42,30,0.15);
     outline:none;
     cursor:pointer;
   }
   .seek-bar::-webkit-slider-runnable-track{
     height:4px; border-radius:4px;
-    background: linear-gradient(to right, var(--amber) var(--seek-pct,0%), rgba(243,233,210,0.15) var(--seek-pct,0%));
+    background: linear-gradient(to right, var(--amber) var(--seek-pct,0%), rgba(58,42,30,0.15) var(--seek-pct,0%));
   }
   .seek-bar::-webkit-slider-thumb{
     -webkit-appearance:none;
@@ -236,7 +236,7 @@
   }
   .seek-bar::-moz-range-track{
     height:4px; border-radius:4px;
-    background:rgba(243,233,210,0.15);
+    background:rgba(58,42,30,0.15);
   }
   .seek-bar::-moz-range-progress{
     height:4px; border-radius:4px;
@@ -274,7 +274,7 @@
     aspect-ratio:1;
     display:flex; align-items:center; justify-content:center;
     background:var(--canopy-green);
-    border:2px solid rgba(217,164,65,0.45);
+    border:2px solid rgba(194,112,58,0.45);
     border-radius:8px;
     font-family:'Inter',sans-serif;
     font-weight:700;
@@ -283,9 +283,9 @@
     cursor:pointer;
     transition: background 0.15s, color 0.15s;
   }
-  .ws-cell.selecting{ background:rgba(217,164,65,0.3); color:var(--canopy-dark); }
+  .ws-cell.selecting{ background:rgba(194,112,58,0.3); color:var(--canopy-dark); }
   .ws-cell.correct{ background:var(--sage); color:var(--canopy-dark); border-color:var(--sage); }
-  .quiz-hint{ text-align:center; font-size:12px; color:rgba(243,233,210,0.45); margin-bottom:6px; }
+  .quiz-hint{ text-align:center; font-size:12px; color:rgba(58,42,30,0.45); margin-bottom:6px; }
   .hint-btn{
     margin: 6px auto 12px;
     display:block;
@@ -328,7 +328,7 @@
       <div class="home-title display">GUARDIAN OF<br>THE FOREST</div>
       <button class="btn btn-large" onclick="goToStory()">MEET DELIUS</button>
       <div class="credit">
-        <span class="credit-label">Created by</span>
+        <span class="credit-label">CREATED BY</span>
         <span class="credit-name">VASEGARAN MURUGAIAH</span>
       </div>
     </div>
